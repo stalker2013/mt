@@ -1,161 +1,191 @@
-*{margin:0;padding:0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background: linear-gradient(270deg, rgb(171, 5, 226), rgb(1, 213, 255));
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 50px;
+}
+
 .square {
   text-align: center;
-  
 }
-.add_note{
-/* width: 100px; */
-width: 400px;
+
+.add_note {
+  width: 400px;
   height: 400px;
   background-color: rgb(240, 240, 240);
- display: flex;
- flex-direction: column;
-justify-content: center;
-align-items: center;
-margin-left: 200px;
- gap: 20px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+  gap: 20px;
 }
+
 .plus {
   font-size: 200px;
   color: black;
- /* margin-top:-280px; */
 }
- .circle {
-      width: 200px;
-      height: 200px;
-      background-color: rgb(255, 0, 0);
-        border-radius: 50%;
-         display: flex;
-justify-content: center;
-align-items: center;
- }
- .note
-{
-      width: 400px;
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.note {
+  width: 400px;
   height: 400px;
   background-color: rgb(240, 240, 240);
-   display: flex;
- flex-direction: column;
-justify-content: center;
-align-items: center;
-margin-left: 200px;
-}
-.all_notes
-{
-    display: grid;
-    grid-template-columns: repeat(2, 500px);
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
 }
 
-body{
-     background:linear-gradient(270deg, rgb(171, 5, 226), rgb(1, 213, 255)) ; 
-
-    
-   
-
-    font-family: 'Courier New', Courier, monospace;
-    padding-top:50px ;
-}
-.wrapper{
-    margin:0 auto ;
-    width: 600px;
-    border-style:dotted;
-    border-width: 10px;
-    text-align: center;
-    padding: 10px;
-}
-li{
-    list-style: none;
-    background-color: rgba(104, 94, 94, 0.392);
-    margin: 10px 0;
-    padding: 7px;
-    border-style: solid;
-    font-size: 40px;
-    color: greenyellow;
-}
-
-li:hover,#add:hover{
-background-color: rgb(21, 16, 16);
-cursor: pointer;
-}
-h1{
-    font-size: 60px;
-    font-weight: 75px;
-}
-.flex{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-#add{
-    width: 50px;
-    height: 50px;
-    font-size: 40px;
-    background-color: rgba(104, 94, 94, 0.392);
-    margin-left: 10px;
-    color: rgb(239, 236, 236);
-}
-.theme{
-    position: fixed;
-    left: 20px;
-    top: 20px;
-    border-radius: 50%;
-    width: 110px;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.dark{
-    background-color: rgb(75, 65, 65);
-    color: aliceblue;
-}
-.dark:hover{
-    background-color: rgb(60, 55, 55);
-}
-.light{
-    background-color: rgb(160, 154, 154);
-    color: aliceblue;
-}
-.light:hover{
-    background-color: rgb(232, 222, 222);
-    color: rgb(64, 64, 64);
+.notes_list {
+  margin-top: 20px;
 }
 
 .wrapper {
-    display: none;
+  margin: 0 auto;
+  width: 600px;
+  border-style: dotted;
+  border-width: 10px;
+  text-align: center;
+  padding: 10px;
+  display: none;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#add {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  background-color: rgba(104, 94, 94, 0.392);
+  margin-left: 10px;
+  color: rgb(239, 236, 236);
+  cursor: pointer;
+}
+
+#add:hover {
+  background-color: rgb(21, 16, 16);
+}
+
+.theme {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: rgb(75, 65, 65);
+  color: aliceblue;
+}
+
+.dark:hover {
+  background-color: rgb(60, 55, 55);
+}
+
+.light {
+  background-color: rgb(160, 154, 154);
+  color: aliceblue;
+}
+
+.light:hover {
+  background-color: rgb(232, 222, 222);
+  color: rgb(64, 64, 64);
+}
+
 .menu-content {
-    display: flex;
-    gap: 5px;
-    margin-top: 5px;
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
 }
 
 .menu-content button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 .menu-content .edit {
-    background-color: #ffc107;
-    color: #000;
+  background-color: #ffc107;
+  color: #000;
 }
 
-.menu-content.delete {
-    background-color: #dc3545;
-    color: #fff;
+.menu-content .delete {
+  background-color: #dc3545;
+  color: #fff;
 }
 
 .menu-content .archive {
-    background-color: #17a2b8;
-    color: #fff;
+  background-color: #17a2b8;
+  color: #fff;
 }
 
 .menu-content button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
+}
+
+.archived {
+  background-color: #ddd;
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.note input[type="text"] {
+  width: 90%;
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 16px;
+}
+.note {
+  width: 400px;
+  height: 400px;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 200px;
+
+  gap: 10px;
+  padding: 15px;
+  overflow: auto;
+  word-wrap: break-word;
+  box-sizing: border-box;
+
+  margin-bottom: 20px; /* відступ знизу між нотатками */
+}
+.note h1, .note p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-wrap: break-word;  /* перенос слів */
+  word-break: break-word;     /* ще один варіант переносу */
 }

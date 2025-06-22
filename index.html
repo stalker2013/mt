@@ -1,54 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-   <script defer src="java.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Нотатки</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="java.js"></script>
 </head>
 <body>
-    <div class="all_notes">
-        <div class="add_note">
-            <div class="square">
-                <h1>ваші нотатки</h1>
-            </div>
-            <div class="circle">
+    <div class="add_note">
+        <div class="square">
+            <h1>ваші нотатки</h1>
+        </div>
+        <div class="circle">
             <div class="plus">+</div>
-            </div>
         </div>
+    </div>
 
-        <div class="note">
-            <h1>Title</h1>
-            <p>Description</p>
-            
-            <div class="menu">
-                <div class="dots">⋮</div>
-                <div class="menu-content">
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
-                    <button class="archive">Archive</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="theme dark">
-        Dark Theme
-    </div>
-    
-    <div class="wrapper">
+    <div class="notes_list"></div>
+
+    <div class="theme dark">Dark Theme</div>
+
+    <div class="wrapper" style="display:none;">
         <h1>all_notes</h1>
-        <ul id="all_notes">
-        <!-- <li>123456789</li>
-        <li>123456789</li>
-        <li>123456789</li> -->
-        </ul>
         <div class="flex">
-            <input type="text" name="" id="text_item">
-            <input type="button" value="=" id="add">
+            <input type="text" id="text_item" placeholder="Нова нотатка" />
+            <input type="button" value="+" id="add" />
         </div>
     </div>
-   
+
+    <div class="login-wrapper">
+        <input type="text" id="username" placeholder="Введіть логін" />
+        <button id="login">Увійти</button>
+    </div>
+
+    <button id="logout" style="display:none;">Вийти</button>
 </body>
 </html>
