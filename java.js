@@ -164,5 +164,8 @@ $(document).ready(function () {
     $(".add_note").show();
     loadNotes();
   }
-  $(".add_note").slice(1).remove(); // залишаємо тільки перший .add_note
+
+  if ($(".add_note").length > 1) {
+  $(".add_note").slice(1).remove();
+}
 });
